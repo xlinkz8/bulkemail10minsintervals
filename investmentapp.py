@@ -1,16 +1,22 @@
 import time
+import datetime 
 
 profit_percentage = 10
 
-def investment_timer():
-    investor_name = "Jack"
-    print(investor_name , "Welcome to cohort4 Investment App")
-    wallet = 10000
-    
-    intrest_cal = wallet * profit_percentage / 100
-    wallet_balance = wallet + intrest_cal
-    print("Dear Investor" , investor_name , "Your Wallet has been credited with the sum of:N" , wallet_balance, "10% interest on your capital")
-   
+#def investment_timer():
+investor_name = input('Enter Name')
+print(investor_name , "Welcome to cohort4 Investment App")
+wallet = int(input('Enter amount'))
+transaction_time = datetime.datetime.now()
+
 while True:
-        investment_timer()
-        time.sleep(24 * 60 * 60)
+    profit = wallet * profit_percentage/ 100
+    Wallet += profit
+    text = '{} Your account has been credited with sum of :N {:,.2f} with a 10% profit on your capital at : "{}'
+    print(text.format(investor_name , wallet,transaction_time))
+    
+
+
+    time.sleep(24*60*60)
+    
+ 
